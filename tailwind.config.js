@@ -8,8 +8,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "#1814EB",
+      },
+      boxShadow: {
+        custom: "0 4px 8px rgba(0, 0, 0, 0.1)",
+        customHover: "0 6px 12px rgba(0, 0, 0, 0.2)",
       },
     },
   },
