@@ -1,7 +1,11 @@
+"use client"; 
 import Link from "next/link";
 import React from "react";
+import { signIn, useSession } from "next-auth/react";
 
 const Login = () => {
+    const { data: session } = useSession();
+
     return (
         <div className="min-h-screen flex flex-col md:flex-row justify-center items-center bg-gradient-to-r from-gray-100 to-gray-300 relative">
             {/* Decorative Lights */}
@@ -83,14 +87,14 @@ const Login = () => {
                             Or sign in with
                         </div>
                         <div className="mt-2 flex justify-center gap-4">
-                            <button className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:shadow-lg transition">
+                            <button onClick={() => signIn("google")} className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:shadow-lg transition">
                                 <img
                                     src="./image/google.png"
                                     alt="Google"
                                     className="w-5 h-5"
                                 />
                             </button>
-                            <button className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:shadow-lg transition">
+                            <button onClick={() => signIn("github")} className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:shadow-lg transition">
                                 <img
                                     src="./image/github.png"
                                     alt="GitHub"
