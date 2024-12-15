@@ -30,7 +30,7 @@ const Login = () => {
                                 Knots & Knits
                             </h2>
                             <p className="text-center text-sm md:text-base text-gray-500 mb-4">
-                                Welcome to Knots & Knits, please sign in to continue.
+                                Welcome to Knots & Knits, please sign in to continues.
                             </p>
                         </div>
                         <form>
